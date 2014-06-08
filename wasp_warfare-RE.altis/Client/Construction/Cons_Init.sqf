@@ -1,0 +1,15 @@
+ private[];
+Construction_Start   = Compile preprocessFileLineNumbers "Client\Construction\Cons_Start.sqf";
+Construction_CreateMenu  = Compile preprocessFileLineNumbers "Client\Construction\Cons_CreateConM.sqf";
+Construction_Arrow   = Compile preprocessFileLineNumbers "Client\Construction\Cons_Arrow.sqf";
+Construction_Camera   = Compile preprocessFileLineNumbers "Client\Construction\Cons_Camera.sqf";
+Construction_KeyControl  = Compile preprocessFileLineNumbers "Client\Construction\Cons_KeysControl.sqf";
+Construction_MouseClick  = Compile preprocessFileLineNumbers "Client\Construction\Cons_MouseClick.sqf";
+Construction_MouseMove  = Compile preprocessFileLineNumbers "Client\Construction\Cons_MouseMove.sqf";
+Construction_Exit   = Compile preprocessFileLineNumbers "Client\Construction\Cons_Exit.sqf";
+Construction_Build_Client = Compile preprocessFileLineNumbers "Client\Construction\Cons_Build_Client.sqf";
+Construction_Build_Server = Compile preprocessFileLineNumbers "Client\Construction\Cons_Build_Server.sqf";
+Construction_ObjCornerPos = Compile preprocessFileLineNumbers "Client\Construction\Cons_ObjectCornerPos.sqf";
+Construction_SizeInOut  = Compile preprocessFileLineNumbers "Client\Construction\SizeInOut.sqf";
+Construction_BWallsLocal = Compile preprocessFileLineNumbers "Client\Construction\BWalls_Local.sqf";
+Construction_BWalls   = Compile preprocessFileLineNumbers "Client\Construction\BWalls.sqf";

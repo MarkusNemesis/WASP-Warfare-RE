@@ -1,0 +1,20 @@
+ private ["_xyz", "_pos1", "_pos3", "_pos2", "_pos4", "_Center", "_Dis", "_result", "_this"];
+     _xyz  = boundingBoxReal _this;
+ _Center = boundingCenter _this;
+    _pos1  = _xyz select 0;
+ _pos3  = _xyz select 1;
+ _pos2  = [_pos1 select 0,_pos3 select 1,_pos1 select 2];
+ _pos4  = [_pos3 select 0,_pos1 select 1,_pos1 select 2];
+_pos1  = _this modelToWorld _pos1;
+ _pos1 set [2,0];
+_pos2  = _this modelToWorld _pos2;
+ _pos2 set [2,0];
+_pos3  = _this modelToWorld _pos3;
+ _pos3 set [2,0];
+_pos4  = _this modelToWorld _pos4;
+ _pos4 set [2,0];
+_Center = _this modelToWorld _Center;
+ _Center set [2,0];
+_Dis = _Center distance _pos1;
+ _result = [_pos1, _pos2, _pos3, _pos4, _Dis, _Center];
+_result

@@ -1,0 +1,23 @@
+private ["_Weapons","_Vest","_Head","_RandomWeap","_RandomVest","_RandomHead","_this"];
+ _Weapons =  [    ["arifle_Khaybar_F","30Rnd_65x39_caseless_green"],    ["arifle_Khaybar_C_F","30Rnd_65x39_caseless_green"],        ["LMG_Mk200_F", "200Rnd_65x39_cased_Box"],    ["arifle_MX_F", "30Rnd_65x39_case_mag"],    ["arifle_MXC_F", "30Rnd_65x39_case_mag"],    ["arifle_TRG20_F", "30Rnd_65x39_case_mag"],    ["arifle_TRG21_F", "30Rnd_65x39_case_mag"],        ["arifle_MX_SW_F", "100Rnd_65x39_caseless_mag_Tracer"]   ];
+   _Vest  = [    "V_Rangemaster_belt",    "V_BandollierB_khk",    "V_TacVest_khk",    "V_TacVest_oli",    "V_Chestrig_khk",    "V_BandollierB_rgr",    "V_PlateCarrier1_rgr",    "V_PlateCarrier2_rgr",    "V_PlateCarrierGL_rgr",    "V_ChestrigB_rgr",    "V_BandollierB_cbr",    "V_PlateCarrier1_cbr",    "V_TacVest_brn",    "V_HarnessO_brn",    "V_HarnessOGL_brn"   ];
+   _Head  = [    "H_MilCap_ocamo",    "H_MilCap_mcamo"   ];
+   _Unif    =  [    "U_B_HeliPilotCoveralls",    "U_OI_PilotCoveralls"   ];
+_RandomWeap = _Weapons select floor(random(count(_Weapons) - 1));
+_RandomVest = _Vest select floor(random(count(_Vest) - 1));
+_RandomHead = _Head select floor(random(count(_Head) - 1));
+_RandomUnif = _Unif select random(count(_Unif) - 1);
+removeAllAssignedItems _this;
+       _this addVest _RandomVest;
+ _this addWeapon (_RandomWeap select 0);
+_this addMagazines [(_RandomWeap select 1), 10];
+_this addHeadgear _RandomHead;
+_this addUniform _RandomUnif;
+ _this addMagazines ["HandGrenade",2];
+_this addMagazines ["SmokeShell",2];
+_this  addItem "Binocular";
+_this  addItem "ItemMap";
+ _this  addItem "ItemCompass";
+ _this  addItem "ItemWatch";
+_this  addItem "ItemRadio";
+ 

@@ -1,0 +1,17 @@
+private["_KeyPress", "_MouseMove", "_MouseClick", "_MouseZ"];
+_KeyPress   = (findDisplay 46) displayAddEventHandler ["KeyDown","Control_KeyPress     set [1,_this];
+ 'KB' call PlayerInputControl;
+ false"];
+_MouseMove  = (findDisplay 46) displayAddEventHandler ["MouseMoving","Control_MouseMove   set [1,_this];
+ 'MM' call PlayerInputControl;
+ true"];
+_MouseClick = (findDisplay 46) displayAddEventHandler ["MouseButtonDown","Control_MousePress set [1,_this];
+ 'MB' call PlayerInputControl;
+ true"];
+_MouseZ  = (findDisplay 46) displayAddEventHandler ["MouseZChanged","Control_MouseZChange set [1,_this];
+ 'MZ' call PlayerInputControl;
+ true"];
+Control_KeyPress set [0, _KeyPress];
+Control_MouseMove set [0, _MouseMove];
+Control_MousePress set [0, _MouseClick];
+Control_MouseZChange set [0, _MouseZ];
