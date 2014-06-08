@@ -5,17 +5,17 @@ missionNamespace setVariable ["Done_Public_PlayerList", false];
 (missionNamespace getVariable "Done_Public_PlayerList")
 };
 
-  ["Init_PlayerInf.sqf", "PlayersList Received"] spawn Fun_AddToLog;
+  ["Init_PlayerInf.sqf", "PlayersList Received"] call Fun_AddToLog;
 _PlayerInfo = ["UID", getPlayerUID Player] call GetPlayerInfo;
   if (count _PlayerInfo <= 0) then  {
-   ["CLIENT INIT", format["ADD NEW PLAYER INF [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] spawn Fun_AddToLog;
+   ["CLIENT INIT", format["ADD NEW PLAYER INF [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] call Fun_AddToLog;
   _PlayerInfo  =   [  nil,         name Player,       Player,         true,         side Player,       paramsArray select 3,     nil,         "",          true,         false,         nil,         getPlayerUID Player     ];
   Player call DeleteNVG;
   profileNamespace setVariable ["WASP_Equipment", player call GetEquipment];
 }else{
-   ["CLIENT INIT", format["REFRESH PLAYER INF [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] spawn Fun_AddToLog;
+   ["CLIENT INIT", format["REFRESH PLAYER INF [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] call Fun_AddToLog;
    if ((side Player) != (_PlayerInfo select 4)) exitWith  {
-  ["TEAM SWAP", format["BACK TO LOBBY [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] spawn Fun_AddToLog;
+  ["TEAM SWAP", format["BACK TO LOBBY [NAME: %1] [UID: %2]", name Player, getPlayerUID Player]] call Fun_AddToLog;
   failMission "END2";
  
 };

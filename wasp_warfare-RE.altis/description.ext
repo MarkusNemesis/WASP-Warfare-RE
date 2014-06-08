@@ -3,10 +3,14 @@ respawnDelay 	= 0;
 respawnDialog 	= false;
 disabledAI 		= 0;
 
-author			= "DeraKOren & Spayker & Goga";
-OnLoadName 		= "WASP Warfare V 0.209.2";
-OnLoadMission 	= "WELCOME TO WASP WARFARE ALTIS";
+author			= "DeraKOren & Spayker & Goga | Modified by Radioman / Markus.Davey";
+OnLoadName 		= "WASP Warfare V 0.209.2 - RE v0.05";
+OnLoadMission 	= "WELCOME TO WASP WARFARE - RE ALTIS";
 loadScreen 		= "GUI\Images\Loading\WASP_MissionLoadingMain.paa";
+
+// Markus - Rudimentary team balancing
+joinUnassigned = 0;
+/// - markus
 
 class Header
 {

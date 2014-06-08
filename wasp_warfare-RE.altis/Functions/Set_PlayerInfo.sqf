@@ -12,7 +12,7 @@ _SendChangedData =   {
            if (str(_OldCell) != str(_NewCell)) then   {
         ["Public_PlayerList", _Index, _i, [true,true,true], _NewCell] call Send_ArrayRowCol;
             _CellsName = ["ID","Name","Object","In Game","Side","Money","Equipment","Voted for","Show Vote","Commander","ServerID","UID"];
-    ["SetPlayerInfo.sqf", format["%1 - %2: %3",_NewData select 1, _CellsName select _i, _NewCell]] spawn Fun_AddToLog;
+    ["SetPlayerInfo.sqf", format["%1 - %2: %3",_NewData select 1, _CellsName select _i, _NewCell]] call Fun_AddToLog;
    
 };
 
@@ -74,12 +74,12 @@ if (_PlayerInfNotBug) then{
    if (!_Founded) then  {
   _Value set[0, count(_PlayerList)];
   ["Public_PlayerList", count(_PlayerList), _Value] call Send_All_Array;
- ["SetPlayerInfo", format["Added: %1", _this]] spawn Fun_AddToLog;
+ ["SetPlayerInfo", format["Added: %1", _this]] call Fun_AddToLog;
   
 };
 
 }else{
- ["SetPlayerInfo", format["Buged: %1", _this]] spawn Fun_AddToLog;
+ ["SetPlayerInfo", format["Buged: %1", _this]] call Fun_AddToLog;
 
 };
 

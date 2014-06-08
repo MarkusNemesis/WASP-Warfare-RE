@@ -41,7 +41,7 @@ class WFUpgrades
 		{
 		
 			idc = -1;
-			text = "Upgrades Menu";
+			text = "Upgrades Menu - Double Click to run";
 			font = "PuristaMedium";
 
 			h = UpH * 0.75;

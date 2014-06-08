@@ -1,42 +1,43 @@
 WASP Warfare - RE 0.1v
 
 UI
-	- Factory: Buying units needs to be default to nearest base building - x
+	- Factory: Buying units needs to be default to nearest base building - xx?
 	- Gear: Can buy weapons/items multiple times but only get one, but charged for each time you 'added' the item x? (75% done, rockets bought into the ammo slot do not pay back)
-	- Gear: Selling helmets does not actually remove the item but gives you money. Disable "sell back" of items. x
-	- Team: You can transfer money to yourself to make infinite money x
-	- Factory: You can buy infinite vehicles if you click fast enough
+	- Gear: Selling helmets does not actually remove the item but gives you money. Disable "sell back" of items. xx?
+	- Team: You can transfer money to yourself to make infinite money xx?
+	- Factory: You can buy infinite vehicles if you click fast enough xx (Temporarily fixed via a cool down on the buy button... sigh)
+		- Update_Turn.sqf will need rewriting from scratch, or ommiting entirely
 	- Upgrades: menu has no countdown - (Cannot be done)
-	- Upgrades: menu needs tooltip "Doubleclick to run upgrade" x
+	- Upgrades: menu needs tooltip "Doubleclick to run upgrade" xx?
 	Commander Build mode
 		- Buildings can be built anywhere.
 
 AI
-	- Town AI vehicles do not engage due to aim shake. x
-	- Infantry lethality needs to be increased (lesser idiocy) x
+	- Town AI vehicles do not engage due to aim shake. xx?
+	- Infantry lethality needs to be increased (lesser idiocy) xx?
 
 Balance
 	Heavy
-		- BTR/Kamysh to HF1
-		- T100 to HF2
-		- Arty + Tigris to HF3
+		- BTR/Kamysh to HF1 xx
+		- T100 to HF2 xx
+		- Arty + Tigris to HF3 xx
 	Light
-		- Ambos to LF2
+		- Ambos to LF2 xx
 		- Marid needs to be LF3
 
 Map
-	- Despawned vehicles don't delete their marker
-	- Towns don't have supply value on their name
+	- Despawned vehicles don't delete their marker x?
+	- Towns don't have supply value on their name x?
 
 General
-	- Empty vehicles despawn too soon.
+	- Empty vehicles despawn too soon. xx
 	- Player payouts appear to occur multiple times a cycle
-	- Starting vehicles - Ambo + Truck
-	- Remove random debug 'hints'
+	- Starting vehicles - Ambo + Truck xx
+	- Remove random debug 'hints' - WIP
 	- Towns MG Nests don't despawn when a town is capped.
 
 Description.ext
-	- joinUnassigned - Auto assigns players to the side with least players. Rudimentary, un-forced team balancing. x
+	- joinUnassigned - Auto assigns players to the side with least players. Rudimentary, un-forced team balancing. xx
 	
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -57,3 +58,25 @@ UI
 Scripting
 	- Migrate functions etc to clear Serverside and Clientside scopes
 	- Optimise areas of poor code, ie get_ai_digit
+	
+	
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+How to reconstitute 'obfuscated' code
+
+Replace all in files:
+	- ; with ;\n
+	- { with {\n
+	- }; with };\n
+	- } with \n}
+	
+Use TextFX (Notepad++ plugin)
+	- TextFX -> TextFX Edit -> Reindent C++ Code
+							-> Remove empty lines
+
+
+	
+	
+	
+	
+	

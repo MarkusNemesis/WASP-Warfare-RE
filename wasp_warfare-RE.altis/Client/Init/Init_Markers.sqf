@@ -1,4 +1,4 @@
-["CLIENT INIT", "ADD MARKERS VARIABLE"] spawn Fun_AddToLog;
+["CLIENT INIT", "ADD MARKERS VARIABLE"] call Fun_AddToLog;
 uiNamespace setVariable ["Markers_MHQ"  , ""];
 uiNamespace setVariable ["Markers_Players" , []];
 uiNamespace setVariable ["Markers_Buildingss", []];

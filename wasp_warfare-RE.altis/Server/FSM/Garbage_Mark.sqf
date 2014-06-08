@@ -5,32 +5,24 @@ _VehAndWep  = vehicles + (allMissionObjects "GroundWeaponHolder") + (allMissionO
 _VehMarked = 0;
 _Marked  = false;
 {
- private["_TimeMarker"];
- _TimeMarker = _x getVariable "TimeMarker";
- if not (_x in _NotNeedDel) then {
-  private["_Type"];
-  _Type = typeOf _x;
-    if (((_Type in _DelOnlyDead) && (!Alive _x)) || !(_Type in _DelOnlyDead)) then  {
-  if (isNil "_TimeMarker") then   {
-      _x setVariable ["TimeMarker", time, false];
-   _VehMarked  = _VehMarked + 1;
-   _Marked  = true;
-  }  else  {
-      if (count (crew _x) > 0) then {
-_x setVariable ["TimeMarker", time, false]
-};
-
-    
-};
-
- 
-};
-
- 
-};
-
+	private["_TimeMarker"];
+	_TimeMarker = _x getVariable "TimeMarker";
+	if not (_x in _NotNeedDel) then {
+		private["_Type"];
+		_Type = typeOf _x;
+		if (((_Type in _DelOnlyDead) && (!Alive _x)) || !(_Type in _DelOnlyDead)) then  {
+			if (isNil "_TimeMarker") then   {
+				_x setVariable ["TimeMarker", time, false];
+				_VehMarked  = _VehMarked + 1;
+				_Marked  = true;
+			}  else  {
+				if (count (crew _x) > 0) then {
+					_x setVariable ["TimeMarker", time, false]
+				};
+			};
+		};
+	};
 } forEach _VehAndWep;
 if (_Marked) then {
-["GARBAGE", format["Marked: %1", _VehMarked]] spawn Fun_AddToLog
+	["GARBAGE", format["Marked: %1", _VehMarked]] call Fun_AddToLog
 };
-

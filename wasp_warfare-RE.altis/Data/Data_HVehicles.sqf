@@ -16,9 +16,9 @@ _BlueforHeavyVeh =
 		["HF3"	, "B_MBT_01_cannon_F" 			, "PRIVATE"		, 20	, 5000	, 25	, true	, true	, true	, true	],
 		["HF3"	, "B_APC_Tracked_01_AA_F" 		, "PRIVATE"		, 20	, 6000	, 25	, true	, true	, true	, true	],
 		["HF3"	, "B_MBT_01_arty_F" 			, "PRIVATE"	    , 20	, 7500	, 25	, true	, true	, true	, false	],
-		["HF2"	, "B_MBT_01_mlrs_F" 			, "PRIVATE"	    , 20	, 7500	, 25	, true	, true	, true	, true	],
-		["HF1"	, "B_APC_Tracked_01_CRV_F" 		, "PRIVATE"		, 20	, 1000	, 25	, true	, true	, true	, false	],
-		["HF1"	, "B_MBT_01_TUSK_F"				, "PRIVATE"		, 20	, 5500	, 25	, true	, true	, true	, false	]
+		["HF3"	, "B_MBT_01_mlrs_F" 			, "PRIVATE"	    , 20	, 7500	, 25	, true	, true	, true	, true	],
+		["HF0"	, "B_APC_Tracked_01_CRV_F" 		, "PRIVATE"		, 20	, 1000	, 25	, true	, true	, true	, false	],
+		["HF2"	, "B_MBT_01_TUSK_F"				, "PRIVATE"		, 20	, 5500	, 25	, true	, true	, true	, false	]
 	];
 	
 //// Opfor
@@ -29,9 +29,9 @@ _OpforHeavyVeh	=
 	  //[ 0 	, 1								, 2				, 3		, 4		, 5		, 6		, 7		, 8	   	, 9		]
 		["HF0"	, "O_APC_Wheeled_02_rcws_F"   	, "PRIVATE"		, 10	, 800	, 20	, true	, true	, true	, true	],
 		["HF1"	, "O_APC_Tracked_02_cannon_F" 	, "PRIVATE"		, 20	, 1900	, 25	, true	, true	, true	, true	],
-		["HF3"	, "O_MBT_02_cannon_F"			, "PRIVATE"		, 20	, 5000	, 25	, true	, true	, true	, true	],
+		["HF2"	, "O_MBT_02_cannon_F"			, "PRIVATE"		, 20	, 5000	, 25	, true	, true	, true	, true	],
 		["HF3"	, "O_APC_Tracked_02_AA_F" 		, "PRIVATE"		, 20	, 6000	, 25	, true	, true	, true	, true	],
-		["HF2"	, "O_MBT_02_arty_F" 			, "PRIVATE"	    , 20	, 7500	, 25	, true	, true	, true	, false	]
+		["HF3"	, "O_MBT_02_arty_F" 			, "PRIVATE"	    , 20	, 7500	, 25	, true	, true	, true	, false	]
 	];
 	
 //// Resistance

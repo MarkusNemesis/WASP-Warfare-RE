@@ -27,4 +27,4 @@ _RGroups = _RGroups + 1
 ["GROUPS COUNT", format["West: %1;
  East: %2;
  Resis: %3;
-", _WGroups, _EGroups, _RGroups]] spawn Fun_AddToLog;
+", _WGroups, _EGroups, _RGroups]] call Fun_AddToLog;

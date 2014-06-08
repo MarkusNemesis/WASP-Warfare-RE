@@ -7,7 +7,7 @@ class WFBuyUnits
 {
 	movingEnable = 1;
 	idd = 68792002;
-	onLoad = "uiNamespace setVariable ['WFDisplay_buyUnits', _this select 0];[_this, 'onLoad'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+	onLoad = "uiNamespace setVariable ['WFDisplay_buyUnits', _this select 0];[_this, 'onLoad'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 
 	//// Background class
 	//////////////////////
@@ -81,7 +81,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_B.paa";
-			action = "[_this, 'B'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'B'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class LF_Type: RscClickableText
@@ -93,7 +93,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_LF.paa";
-			action = "[_this, 'LF'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'LF'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class HF_Type: RscClickableText
@@ -105,7 +105,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_HF.paa";
-			action = "[_this, 'HF'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'HF'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class AF_Type: RscClickableText
@@ -117,7 +117,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_AF.paa";
-			action = "[_this, 'AF'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'AF'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 
 		class BF_Type: RscClickableText
@@ -129,7 +129,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_BF.paa";
-			action = "[_this, 'BF'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'BF'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 
 		class TC_Type: RscClickableText
@@ -141,7 +141,7 @@ class WFBuyUnits
 			h = 0.056 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\Buy\Buy_TC.paa";
-			action = "[_this, 'TC'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'TC'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		/// Factory Choose
@@ -187,8 +187,8 @@ class WFBuyUnits
 				thumb = "#(argb,8,8,3)color(1,1,1,0)";
 			};
 			
-			onLBSelChanged = "[_this, 'Select'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
-			onLBDblClick = "[_this, 'BuySelected'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			onLBSelChanged = "[_this, 'Select'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
+			onLBDblClick = "[_this, 'BuySelected'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class RSCMap: RscMapControl
@@ -216,7 +216,7 @@ class WFBuyUnits
 			h = 0.042 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\i_driver.paa";
-			action = "[1301, 'SpecBChange'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[1301, 'SpecBChange'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class Gunner: RscClickableText
@@ -228,7 +228,7 @@ class WFBuyUnits
 			h = 0.042 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\i_gunner.paa";
-			action = "[1302, 'SpecBChange'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[1302, 'SpecBChange'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 
 		class Commander: RscClickableText
@@ -240,7 +240,7 @@ class WFBuyUnits
 			h = 0.042 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\i_commander.paa";
-			action = "[1303, 'SpecBChange'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[1303, 'SpecBChange'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 
 		class Lock_Unlock: RscClickableText
@@ -252,7 +252,7 @@ class WFBuyUnits
 			h = 0.042 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
 			text = "GUI\Images\i_lock.paa";
-			action = "[1304, 'SpecBChange'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[1304, 'SpecBChange'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		/// Information Structured text
@@ -348,7 +348,7 @@ class WFBuyUnits
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 			text = "Buy";
-			action = "[_this, 'BuySelected'] ExecVM 'GUI\GUI_WFBuyUnits.sqf'";
+			action = "[_this, 'BuySelected'] call compile preprocessFileLineNumbers 'GUI\GUI_WFBuyUnits.sqf'";
 		};
 		
 		class ExitButton: RscButton
