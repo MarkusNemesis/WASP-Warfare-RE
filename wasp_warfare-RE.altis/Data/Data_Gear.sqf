@@ -307,9 +307,9 @@ _Item	=
 	[
 	  //[ 0 	, 1										, 2		, 3		, 4		, 5		]
 	  //[ L 	, TypeName 								, Money , Blue	, Opfor , Resis ]
-	  	["WP3"	, "NVGoggles"							, 150	, true	, false	, false	],
-		["WP3"	, "NVGoggles_OPFOR"						, 150	, false	, true	, false	],
-		["WP3"	, "NVGoggles_INDEP"						, 150	, false	, false	, true	],
+	  	["WP0"	, "NVGoggles"							, 150	, true	, false	, false	],
+		["WP0"	, "NVGoggles_OPFOR"						, 150	, false	, true	, false	],
+		["WP0"	, "NVGoggles_INDEP"						, 150	, false	, false	, true	],
 		["WP0"	, "Binocular"							, 50	, true	, true	, true	],
 		["WP3"	, "Laserdesignator"						, 550	, true	, true	, true	],
 		["WP0"	, "ItemGPS"								, 100	, true	, true	, true	],

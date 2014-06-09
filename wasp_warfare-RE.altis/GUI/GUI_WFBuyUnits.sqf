@@ -241,7 +241,7 @@ _onLoad ={
 	waitUntil {
 		["Server", "Public_BuyTurnNumber"] call Send_Request;
 		[] call _UpdateTurn;
-		isNull ((_this select 0) select 0) 
+		//isNull ((_this select 0) select 0)
 	};
 };
 _TypeB ={
